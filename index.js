@@ -4,7 +4,17 @@ const port = 3000;
 
 app.use(express.json());
 
-let items = [];
+// In-memory data storage
+let items = [
+    {
+      id: 1,
+      name: "oneplus nord 1"
+    },
+    {
+      id: 2,
+      name: "samsung galaxy s24"
+    }
+  ];
 
 app.get('/items', (req,res) => {
     res.json(items)
